@@ -1,7 +1,9 @@
 'use strict';
 
-document.getElementById('colors').addEventListener('change', function() {
+const colors = document.getElementById('colors');
+
+colors.addEventListener('change', () => {
     chrome.tabs.executeScript({
-        code: 'document.body.style.backgroundColor = "' + this.value + '"'
+        code: 'document.body.style.backgroundColor = "' + colors.value + '"'
     });
 });
