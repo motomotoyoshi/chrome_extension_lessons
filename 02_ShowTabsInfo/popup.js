@@ -1,6 +1,10 @@
 'use strict';
 
-chrome.tabs.query({}, (tabs) => {
+// chrome.tabs.query({lastFocusedWindow: true}, (tabs) => {
+chrome.tabs.query({
+    active: true,
+    lastFocusedWindow: true
+}, (tabs) => {
     let i;
     let results = document.getElementById('results');
     let titles = [];
