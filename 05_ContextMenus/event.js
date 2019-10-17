@@ -20,4 +20,10 @@ chrome.runtime.onInstalled.addListener(() => {
         parentId: parent,
         title: 'Green'
     });
-})
+});
+
+chrome.contextMenus.onClicked.addListener(item => {
+    chrome.tabs.executeScript({
+        code: 'document.body.style.backgroundColor = "' + item.menuItemId + '"'
+    });
+});
