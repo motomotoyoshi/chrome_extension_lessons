@@ -11,6 +11,10 @@
         "page": "options.html",
         "chrome_style": true
     },
+    "background": {
+        "scripts": ["event.js"],
+        "persistent": false
+    },
     "permissions": [
         "activeTab",
         "storage"
